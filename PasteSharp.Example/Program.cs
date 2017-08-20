@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using PasteSharp.Enums;
 
 namespace PasteSharp.Example
 {
@@ -13,7 +14,7 @@ namespace PasteSharp.Example
         private static async Task MainAsync()
         {
             var client = new PasteSharpClient("api-key");
-            Console.WriteLine(await client.CreatePasteAsync("Example paste", DateTime.Now.ToString()));
+            Console.WriteLine(await client.CreatePasteAsync("Example paste", Publicity.Unlisted, DateTime.Now.ToString()));
 
             await Task.Delay(-1);
         }

@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using PasteSharp.Enums;
 using PasteSharp.Interfaces;
 using PasteSharp.Services;
 
@@ -15,9 +16,9 @@ namespace PasteSharp
             _pasteService = new PasteService();
         }
 
-        public async Task<string> CreatePasteAsync(string content, string title = "Untitled")
+        public async Task<string> CreatePasteAsync(string content, Publicity publicity = Publicity.Public, string title = "Untitled")
         {
-            return await _pasteService.CreatePasteAsync(_apiKey, title, content).ConfigureAwait(false);
+            return await _pasteService.CreatePasteAsync(_apiKey, title, publicity, content).ConfigureAwait(false);
         }
     }
 }
