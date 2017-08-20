@@ -20,8 +20,8 @@ namespace PasteSharp.Services
 
             using (var postContent = new FormUrlEncodedContent(post))
             {
-                var result = await Http.PostAsync(Settings.PostUrl, postContent);
-                return await result.Content.ReadAsStringAsync();
+                var result = await Http.PostAsync(Settings.PostUrl, postContent).ConfigureAwait(false);
+                return await result.Content.ReadAsStringAsync().ConfigureAwait(false);
             }
         }
     }
