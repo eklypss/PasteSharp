@@ -1,4 +1,4 @@
-[![NuGet version](https://badge.fury.io/nu/PasteSharpCore.svg)](https://badge.fury.io/nu/PUBGSharp)
+[![NuGet version](https://badge.fury.io/nu/PasteSharpCore.svg)](https://badge.fury.io/nu/PasteSharpCore)
 # PasteSharp
 Lightweight .NET Core library for uploading pastes to Pastebin.
 
