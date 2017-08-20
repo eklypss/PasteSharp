@@ -13,9 +13,13 @@ namespace PasteSharp.Example
 
         private static async Task MainAsync()
         {
+            // Create new PasteSharpClient
             var client = new PasteSharpClient("api-key");
-            Console.WriteLine(await client.CreatePasteAsync("Example paste", Publicity.Unlisted, DateTime.Now.ToString()));
 
+            // Create a paste, the CreatePasteAsync function returns a string which is the URL of the
+            // newly created paste.
+            Console.WriteLine(await client.CreatePasteAsync("Example paste", Publicity.Unlisted, DateTime.Now.ToString()));
+            // returns: https://pastebin.com/UVqjnRkE (probably expired as of now)
             await Task.Delay(-1);
         }
     }

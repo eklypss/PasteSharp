@@ -26,6 +26,7 @@ namespace PasteSharp.Services
             }
         }
 
+        // Just to make the code above a bit neater.
         public int GetPublicityInt(Publicity publicity)
         {
             return (int)publicity;
