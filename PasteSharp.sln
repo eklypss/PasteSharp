@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasteSharp", "PasteSharp\PasteSharp.csproj", "{DD4EB6A6-3A24-4914-BE6E-101185E4026F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasteSharp.Example", "PasteSharp.Example\PasteSharp.Example.csproj", "{4F20603A-8FAD-4232-B486-9B09B0FAB8BE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DD4EB6A6-3A24-4914-BE6E-101185E4026F} = {DD4EB6A6-3A24-4914-BE6E-101185E4026F}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +20,10 @@ Global
 		{DD4EB6A6-3A24-4914-BE6E-101185E4026F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD4EB6A6-3A24-4914-BE6E-101185E4026F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD4EB6A6-3A24-4914-BE6E-101185E4026F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F20603A-8FAD-4232-B486-9B09B0FAB8BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F20603A-8FAD-4232-B486-9B09B0FAB8BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F20603A-8FAD-4232-B486-9B09B0FAB8BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F20603A-8FAD-4232-B486-9B09B0FAB8BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
