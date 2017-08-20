@@ -2,7 +2,7 @@
 
 namespace PasteSharp
 {
-    public class Class1
+    public class PasteSharpClient
     {
     }
 }
