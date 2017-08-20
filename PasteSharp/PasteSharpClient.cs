@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using PasteSharp.Interfaces;
 using PasteSharp.Services;
 
 namespace PasteSharp
