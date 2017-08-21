@@ -7,6 +7,10 @@
     <PackageProjectUrl>https://github.com/eklypss/PasteSharp/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/eklypss/PasteSharp/</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>PasteSharpCore</PackageId>
+    <Authors>eklypss</Authors>
+    <Company />
+    <Product>PasteSharpCore</Product>
   </PropertyGroup>
 
 </Project>
