@@ -6,7 +6,7 @@ using PasteSharp.Config;
 
 namespace PasteSharp.Services
 {
-    public class PasteService
+    public class PasteService : IDisposable
     {
         private static HttpClient Http = new HttpClient();
 
@@ -24,6 +24,11 @@ namespace PasteSharp.Services
                 var result = await Http.PostAsync(Settings.PostUrl, postContent).ConfigureAwait(false);
                 return await result.Content.ReadAsStringAsync().ConfigureAwait(false);
             }
+        }
+
+        public void Dispose()
+        {
+            Http.Dispose();
         }
     }
 }

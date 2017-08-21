@@ -19,6 +19,11 @@ namespace PasteSharp.Example
             // newly created paste.
             Console.WriteLine(await client.CreatePasteAsync("Example paste", false, DateTime.Now.ToString()));
             // returns: https://pastebin.com/g514v8u9 (probably expired as of now)
+
+            // Just in case, you can dispose the PasteSharpClient. You can also use the "using"
+            // keyword to simplify this.
+            client.Dispose();
+
             await Task.Delay(-1);
         }
     }
