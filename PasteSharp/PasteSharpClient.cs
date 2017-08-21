@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using PasteSharp.Config;
 using PasteSharp.Interfaces;
 using PasteSharp.Services;
 
@@ -20,17 +21,19 @@ namespace PasteSharp
         /// Creates a new paste.
         /// </summary>
         /// <param name="content">Content of the paste.</param>
-        /// <param name="publicity"><see cref="Publicity"/> of the paste.</param>
         /// <param name="title">Title of the paste.</param>
+        /// <param name="unlisted">Whether the paste will be unlisted or not.</param>
+        /// <param name="expire">Duration until the paste expires.</param>
         /// <returns>URL to the paste as a string.</returns>
-        public async Task<string> CreatePasteAsync(string content, bool unlisted = false, string title = "Untitled")
+        public async Task<string> CreatePasteAsync(string content, bool unlisted = false, string title = "Untitled", string expire = ExpireTime.Never)
         {
-            return await _pasteService.CreatePasteAsync(_apiKey, title, unlisted, content).ConfigureAwait(false);
+            return await _pasteService.CreatePasteAsync(_apiKey, title, unlisted, content, expire).ConfigureAwait(false);
         }
 
         public void Dispose()
         {
             _pasteService.Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }

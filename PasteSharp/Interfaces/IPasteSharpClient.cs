@@ -4,6 +4,6 @@ namespace PasteSharp.Interfaces
 {
     public interface IPasteSharpClient
     {
-        Task<string> CreatePasteAsync(string content, bool unlisted, string title);
+        Task<string> CreatePasteAsync(string content, bool unlisted, string title, string expire);
     }
 }
